@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Roboto:wght@400;500&family=Single+Day&display=swap');
+
+/* font-family: 'DM Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Single Day', cursive; */
+
+.form {
+    width: 50vw;
+    height: 100vh;
+    box-sizing: border-box;
+    background: #000000;
+    color: #ffffff;
+    padding: 5vh 4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form h1 {
+    margin: 0;
+    font-family: 'Single Day', cursive;
+    font-weight: 400;
+    font-size: 4rem;
+    color: #72DB73;
+}
+
+.form p {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.emailGgl {
+    font-size: 1.3rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    margin: 2vh 0;
+}
+.emailGgl span{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0 1vw;
+    color: #72DB73;
+}
+
+.form .input {
+    box-sizing: border-box;
+    width: 70%;
+    padding: 1.8vh 1vw;
+    background-color: #292929;
+    color: #ffffff;
+    border-radius: 3px;
+    border: none;
+}
+
+::placeholder{
+    font-size: .9rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    color: #7C7C7C;
+}
+
+.check{
+    display: flex;
+    box-sizing: border-box;
+    width: 70%;
+}
+.check label{
+    font-size: .9rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    color: #7C7C7C;
+    margin-left: .75vw;
+}
+
+.form button{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    background-color: #72DB73;
+    border: none;
+    color: #ffffff;
+    border-radius: 100px;
+    width: 70%;
+    box-sizing: border-box;
+    padding: 1vh 1vw;
+    transition: all 0.15s;
+    margin: 2vh auto;
+}
+.form button:hover{
+    transform: scale(1.02);
+}
+.form button:active{
+    transform: scale(1);
+}
+
+.form .termsCondition{
+    width: 70%;
+    font-size: .8rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #7C7C7C;
+    margin-left: .75vw;
+    line-height: 1.5;
+}
+.form .termsCondition span{
+    color: #72DB73;
+}
+
+.error{
+    width: 70%;
+}
+.error p{
+    margin: 0;
+    color: rgb(226, 0, 0);
+    font-size: .75rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
