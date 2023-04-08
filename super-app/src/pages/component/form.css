@@ -83,11 +83,11 @@ font-family: 'Single Day', cursive; */
     border: none;
     color: #ffffff;
     border-radius: 100px;
-    width: 70%;
+    width: 100%;
     box-sizing: border-box;
     padding: 1vh 1vw;
     transition: all 0.15s;
-    margin: 2vh auto;
+    margin: 2vh 0;
 }
 .form button:hover{
     transform: scale(1.02);
@@ -118,4 +118,9 @@ font-family: 'Single Day', cursive; */
     font-size: .75rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+}
+
+.link{
+    width: 70%;
+    text-decoration: none;
 }
