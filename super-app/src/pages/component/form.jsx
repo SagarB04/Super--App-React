@@ -50,7 +50,7 @@ export default function Form() {
 
     const handleClick = (e) => {
 
-        // setInputlink("");
+       
         let error = {};
 
         if (!formValues.name) {
@@ -163,7 +163,7 @@ export default function Form() {
                 <p>{formError.check}</p>
             </div>
 
-            <Link className='link' to={inputlink} onClick={handleClick}  ><button  >SIGN UP</button></Link>
+            <Link className='link' to={inputlink} onClick={handleClick}  ><button>SIGN UP</button></Link>
 
 
             <div className='termsCondition'>By clicking on Sign up. you agree to Superapp <span>Terms and Conditions of Use</span></div>
