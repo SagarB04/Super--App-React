@@ -57,10 +57,12 @@ font-family: 'Single Day', cursive; */
 
 .head .category span {
     color: #085C00;
-    cursor: pointer;
     font-weight: 500;
 }
-
+.head .category span:hover{
+    cursor: pointer;
+    color: rgb(136, 11, 11);
+}
 .card-div {
     box-sizing: border-box;
     width: 60vw;

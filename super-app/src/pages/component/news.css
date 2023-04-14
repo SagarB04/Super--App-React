@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Roboto:wght@400;500&family=Single+Day&display=swap');
+
+.news-div {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    border-radius: 30px;
+    width: 33vw;
+    height: 86vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.newstop {
+    height: 60%;
+    background-image: url('images/mount.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+}
+
+.text {
+    color: #ffffff;
+    background-color: #000000bd;
+    width: 100%;
+    padding: 2vh 1vw;
+}
+
+.text h3 {
+    font-size: 2rem;
+    margin: 1vh 0;
+}
+
+.text span {
+    font-size: 1rem;
+}
+
+.newsbottom {
+    box-sizing: border-box;
+    height: 40%;
+    background-color: #ffffff;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 3vh 2vw;
+    font-size: 1.2rem;
+    line-height: 2;
+}
+.errorLoad{
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
