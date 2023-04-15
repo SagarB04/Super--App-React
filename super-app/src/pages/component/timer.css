@@ -1,0 +1,7 @@
+.timer{
+    width: 61vw;
+    height: 28vh;
+    box-sizing: border-box;
+    background-color: #1E2343;
+    border-radius: 30px;
+}

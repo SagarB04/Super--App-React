@@ -3,10 +3,10 @@
 .profile {
     background-color: #5746EA;
     box-sizing: border-box;
-    width: 53vw;
-    height: 52vh;
+    width: 29vw;
+    height: 34vh;
     border-radius: 30px;
-    padding: 6vh 6vw;
+    padding: 2vh 1.2vw;
     display: flex;
     justify-content: space-between;
     font-family: 'Roboto', sans-serif;
@@ -14,28 +14,28 @@
 }
 
 .profile .image img {
-    width: 11vw;
-    height: 40vh;
-    border-radius: 50px;
+    width: 8vw;
+    height: 31vh;
 }
 
 .profile .info {
-    width: 30vw;
+    width: 17vw;
     color: #FFFFFF;
 }
 
 .profile .info p {
-    font-size: 1.6rem;
-    margin: 1.6vh .75vw;
+    font-size: 1rem;
+    margin: 1.6vh 0;
 }
 
 .profile .info h1 {
-    font-size: 3rem;
-    margin: 0 .75vw;
+    font-size: 2rem;
+    margin: 0 0;
+    font-weight: 500;
 }
 
 .profile .info .category-container {
-    margin: 4vh 0;
+    margin: 2vh 0;
     display: flex;
     flex-wrap: wrap;
 }
@@ -45,11 +45,12 @@
     justify-content: space-between;
     background-color: #9F94FF;
     border-radius: 30px;
-    margin: .75vh .75vw;
-    width: 8.5vw;
+    margin-right: .5vw;
+    margin-bottom: .5vw;
+    width: 5vw;
     box-sizing: border-box;
-    padding: .85vh .8vw;
-    font-size: 1.2rem;
+    padding: .8vh .5vw;
+    font-size: .85rem;
 }
 
 .profile .info .category span:hover {

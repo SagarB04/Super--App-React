@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import Rain from './images/rain.png'
 import Wind from './images/wind.png'
 import Pressure from './images/pressure.png'
@@ -11,44 +11,61 @@ export default function Weather() {
     const [response, setresponse] = useState({})
     const [loading, setloading] = useState(true)
     const [error, setError] = useState()
-    const [arr, setArr] = useState([])
+    const [date, setDate] = useState('')
+    const [time, setTime] = useState('')
+    const [latitude, setlatitude] = useState('');
+    const [longitude, setlongitude] = useState('');
 
-    // const [latitude, setlatitude] = useState('');
-    // const [longitude, setlongitude] = useState('');
+
+    useMemo(() => {
+
+        let today = new Date();
+        setDate(today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear())
+
+        let hour = today.getHours();
+        let hours = ((hour + 11) % 12 + 1)
+        let zone = hour >= 12 ? "PM" : "AM"
+        setTime(hours + ':' + today.getMinutes() + ' ' + zone)
+
+    }, [])
 
     useEffect(() => {
 
-        // const successCallback = (position) => {
-        //     setlatitude(position.coords.latitude)
-        //     setlongitude(position.coords.longitude)
-        //     // console.log(latitude,longitude)
-        // };
+        const successCallback = (position) => {
+            setlatitude(position.coords.latitude)
+            setlongitude(position.coords.longitude)
+        };
 
-        // const errorCallback = (error) => {
-        //     console.log(error);
-        // };
-        // navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+        const errorCallback = (error) => {
+            console.log(error);
+        };
 
-        let url = `http://api.weatherapi.com/v1/current.json?key=3e6bba959e3e46bf965142522231404&q=gwalior&aqi=no`
-        console.log(url);
-        const fetchWeather = async () => {
+        navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 
-            await fetch(url)
-                .then((response) => {
-                    return response.json()
-                })
-                .then((result) => {
-                    setresponse(result)
-                    setloading(false)
-                    setArr(result.location.localtime.split(" "));
-                    console.log(result)
-                })
-                .catch((error) => {
-                    setError(error)
-                })
+        if (latitude && longitude) {
+
+            const fetchWeather = async () => {
+
+                let url = `http://api.weatherapi.com/v1/current.json?key=3e6bba959e3e46bf965142522231404&q=${latitude},${longitude}&aqi=no`
+
+                await fetch(url)
+                    .then((response) => {
+                        return response.json()
+                    })
+                    .then((result) => {
+                        setresponse(result)
+                        setloading(false)
+                    })
+                    .catch((error) => {
+                        setError(error)
+                    })
+            }
+
+            fetchWeather();
+            
         }
-        fetchWeather();
-    }, [/*latitude,longitude*/])
+
+    }, [latitude, longitude])
 
     if (loading) {
         return <h1 className='errorLoad'>loading...</h1>
@@ -59,8 +76,8 @@ export default function Weather() {
     else return (
         <div className='weather-div'>
             <div className="date-time">
-                <h1>{arr[0]}</h1>
-                <h1>{arr[1]}</h1>
+                <h1>{date}</h1>
+                <h1>{time}</h1>
             </div>
             <div className="temp">
                 <div className='weath'>

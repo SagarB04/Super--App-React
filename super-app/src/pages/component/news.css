@@ -4,8 +4,8 @@
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     border-radius: 30px;
-    width: 33vw;
-    height: 86vh;
+    width: 30vw;
+    height: 87vh;
     display: flex;
     flex-direction: column;
 }

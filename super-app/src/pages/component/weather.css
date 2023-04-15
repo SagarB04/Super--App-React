@@ -3,7 +3,8 @@
 .weather-div {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
-    width: 53vw;
+    width: 29vw;
+    height: 17vh;
     color: #ffffff;
 }
 
@@ -12,16 +13,17 @@
     justify-content: space-evenly;
     box-sizing: border-box;
     padding: 1vh 0;
-    height: 9vh;
+    height: 25%;
     background-color: #FF4ADE;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 }
 
 .date-time h1 {
-    font-size: 2.5rem;
+    font-size: 1.25rem;
     margin: 0;
     display: inline;
+    font-weight: 500;
 }
 
 .temp {
@@ -29,7 +31,7 @@
     justify-content: space-evenly;
     align-items: center;
     box-sizing: border-box;
-    height: 20vh;
+    height: 75%;
     padding: 2.5vh 0;
     background-color: #101744;
     border-bottom-left-radius: 30px;
@@ -37,7 +39,7 @@
 }
 
 .temp .line {
-    width: 2px;
+    width: 1px;
 }
 
 .weath {
@@ -46,15 +48,15 @@
     align-items: center;
     justify-content: space-evenly;
     height: 100%;
-    width: 15%;
+    width: 20%;
 }
 
 .weath img {
-    width: 6vw;
+    width: 3vw;
 }
 
 .weath p {
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin: 0;
 }
 
@@ -64,12 +66,14 @@
     justify-content: space-evenly;
     align-items: center;
     height: 100%;
-    width: 15%;
+    width: 20%;
 }
 
 .press h1 {
-    font-size: 2.5rem;
-    margin: 0 0 1.5vh;
+    font-size: 1.5rem;
+    margin: 0 0 .5vh;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 
 .press>div {
@@ -80,11 +84,11 @@
 }
 
 .press img {
-    width: 1.25vw;
+    width: .75vw;
 }
 
 .press span {
-    font-size: 1rem;
+    font-size: .7rem;
 }
 
 .humid-wind {
@@ -92,11 +96,11 @@
     flex-direction: column;
     justify-content: space-evenly;
     height: 100%;
-    width: 15%;
+    width: 20%;
 }
 
 .humid-wind span {
-    font-size: 1rem;
+    font-size: .7rem;
 }
 .div-humid, .div-wind{
     display: flex;
@@ -106,11 +110,11 @@
 
 
 .div-wind img {
-    width: 2.5vw;
+    width: 1.5vw;
 }
 
 .div-humid img {
-    width: 1.5vw; 
+    width: .8vw; 
 }
 .errorLoad{
     color: #fff;

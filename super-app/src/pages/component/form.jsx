@@ -114,6 +114,7 @@ export default function Form() {
                 placeholder='Name'
                 onChange={handleChange}
                 value={formValues.name}
+                spellcheck="false"
             />
             <div className='error'>
                 <p>{formError.name}</p>
@@ -126,6 +127,7 @@ export default function Form() {
                 placeholder='UserName'
                 onChange={handleChange}
                 value={formValues.username}
+                spellcheck="false"
             />
             <div className='error'>
                 <p>{formError.username}</p>
@@ -138,6 +140,7 @@ export default function Form() {
                 placeholder='Email'
                 onChange={handleChange}
                 value={formValues.email}
+                spellcheck="false"
             />
             <div className='error'>
                 <p>{formError.email}</p>

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useMemo } from 'react'
 import './news.css'
+
 export default function News() {
 
 
@@ -8,7 +9,8 @@ export default function News() {
   const [error, setError] = useState()
 
 
-  useEffect(() => {
+  useMemo(() => {
+
     const fetchWeather = async () => {
       await fetch("https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=dba73668ac494f5e9f5ba5e6a743fd30")
         .then((response) => {
@@ -24,6 +26,7 @@ export default function News() {
         })
     }
     fetchWeather();
+    
   }, [])
 
   let number = Math.floor((Math.random() * 10) + 1);
@@ -31,10 +34,15 @@ export default function News() {
   if (loading) {
     return <h1 className='errorLoad'>loading...</h1>
   }
+
   else if (error) {
     return <h1 className='errorLoad'>Error, try refresh...</h1>
   }
-  else return (
+
+  else if(response.articles){ 
+    
+    return (
+
     <div className='news-div'>
       <div className='newstop'>
         <div className="text">
@@ -46,5 +54,12 @@ export default function News() {
         {response.articles[number].content}
       </div>
     </div>
+  
   )
+}
+
+else {
+  return <h1 className='errorLoad'>Error, try refresh...</h1>
+}
+
 }
