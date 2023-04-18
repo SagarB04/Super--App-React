@@ -27,12 +27,12 @@
     padding: 1vh 0;
     resize: none;
     border: none;
-    overflow-wrap: off;
-    
 }
-.note textarea:disabled{
+
+.note textarea:disabled {
     color: #000;
 }
+
 .note textarea:focus {
     outline: none;
 }
@@ -46,6 +46,7 @@
 .note img {
     width: 5vw;
     transition: .35s;
+    cursor: pointer;
 }
 
 .note img:hover {

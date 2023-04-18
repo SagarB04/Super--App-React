@@ -3,7 +3,7 @@ import Image from './images/pen.png'
 import './note.css'
 export default function Note() {
 
-  const [toggle, setToggle] = useState(true)
+  const [toggle, setToggle] = useState(false)
   const handleDisable = () => {
     setToggle(!toggle)
   }
@@ -13,7 +13,6 @@ export default function Note() {
   const handleValue = (event) => {
     setNotes(event.target.value)
   }
-  console.log(notes)
 
   useMemo(() => {
     localStorage.setItem("notes", notes)
@@ -31,7 +30,7 @@ export default function Note() {
         rows="6"
         value={notes}
         onChange={handleValue}
-        spellcheck="false"
+        spellCheck="false"
       ></textarea>
 
       <div>

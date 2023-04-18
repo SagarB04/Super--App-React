@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './profile.css'
 import Img from './images/profile.png'
 
-export default function Profile() {
+function Profile() {
 
     let cat = localStorage.getItem("category")
     const [category, setCategory] = useState(cat.split(","))
@@ -41,3 +41,4 @@ export default function Profile() {
         </div>
     )
 }
+export default Profile;

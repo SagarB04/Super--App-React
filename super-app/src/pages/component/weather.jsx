@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Rain from './images/rain.png'
 import Wind from './images/wind.png'
 import Pressure from './images/pressure.png'
@@ -17,19 +17,18 @@ export default function Weather() {
     const [longitude, setlongitude] = useState('');
 
 
-    useMemo(() => {
-
-        let today = new Date();
-        setDate(today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear())
-
-        let hour = today.getHours();
-        let hours = ((hour + 11) % 12 + 1)
-        let zone = hour >= 12 ? "PM" : "AM"
-        setTime(hours + ':' + today.getMinutes() + ' ' + zone)
-
-    }, [])
-
     useEffect(() => {
+
+        setInterval(() => {
+            let today = new Date();
+            setDate((today.getDate() < 10 ? '0' + today.getDate() : today.getDate()) + '-' + (today.getMonth() < 10 ? '0' + (today.getMonth() + 1) : today.getMonth() + 1) + '-' + today.getFullYear())
+
+            let hour = today.getHours();
+            let hours = ((hour + 11) % 12 + 1)
+            let zone = hour >= 12 ? "PM" : "AM"
+            setTime((hours < 10 ? '0' + hours : hours) + ':' + (today.getMinutes() < 10 ? ('0' + today.getMinutes()) : today.getMinutes()) + ' ' + zone)
+
+        }, 1000);
 
         const successCallback = (position) => {
             setlatitude(position.coords.latitude)
@@ -62,7 +61,7 @@ export default function Weather() {
             }
 
             fetchWeather();
-            
+
         }
 
     }, [latitude, longitude])
