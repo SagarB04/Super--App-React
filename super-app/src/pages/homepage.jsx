@@ -37,7 +37,7 @@ export default function Homepage() {
 
       </div>
       <div className="browsebtn">
-        <Link><button>Browse</button></Link>
+        <Link to="/browse"><button>Browse</button></Link>
       </div>
     </div>
 
