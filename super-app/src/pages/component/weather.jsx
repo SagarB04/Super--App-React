@@ -10,7 +10,7 @@ export default function Weather() {
 
     const [response, setresponse] = useState({})
     const [loading, setloading] = useState(true)
-    const [error, setError] = useState()
+    const [error, setError] = useState(false)
     const [date, setDate] = useState('')
     const [time, setTime] = useState('')
     const [latitude, setlatitude] = useState('');
@@ -56,7 +56,9 @@ export default function Weather() {
                         setloading(false)
                     })
                     .catch((error) => {
-                        setError(error)
+                        setloading(false)
+                        setError(true)
+                        console.log(error)
                     })
             }
 

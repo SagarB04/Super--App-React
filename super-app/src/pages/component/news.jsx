@@ -7,7 +7,7 @@ export default function News() {
 
   const [response, setresponse] = useState({})
   const [loading, setloading] = useState(true)
-  const [error, setError] = useState()
+  const [error, setError] = useState(false)
 
 
   useEffect(() => {
@@ -22,7 +22,8 @@ export default function News() {
           setloading(false)
         })
         .catch((error) => {
-          setError(error)
+          setError(true)
+          setloading(false)
           console.log(error)
         })
     }

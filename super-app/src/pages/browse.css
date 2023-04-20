@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Roboto:wght@400;500&family=Single+Day&display=swap');
+body{
+    background-color: #000;
+}
+.browse {
+    width: 100vw;
+    box-sizing: border-box;
+    
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 1.5vh 2.5vw 0;
+}
+
+.nav h1 {
+    margin: 0;
+    font-family: 'Single Day', cursive;
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: #72DB73;
+    font-family: 'Single Day', cursive;
+}
+
+.nav .pro-img {
+    width: 4vw;
+    height: 4vw;
+    border-radius: 100px;
+    background-image: url('component/images/profile.png');
+    background-size: 110% 160%;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.nav .pro-img:active {
+    transform: scale(.95);
+}
+
+.entertainment {
+    box-sizing: border-box;
+    width: 100vw;
+    padding: 1vh 4vw 0;
+}
+
+.entertainment h2 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.tiles{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.tile h2{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #878787;
+    margin: 1.5vh 0;
+}
+
+.tile .tiles img{
+    width: 20vw;
+    height: 22vh;
+}
+
+.errorLoad{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
