@@ -12,7 +12,7 @@ export default function Browse() {
         <div className='browse'>
             <div className="nav">
                 <h1>Super App</h1>
-                <Link><button className='pro-img'></button></Link>
+                <Link to="/homepage"><button className='pro-img'></button></Link>
             </div>
             <div className="entertainment">
 

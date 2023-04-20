@@ -14,25 +14,23 @@ export default function Movies(prop) {
 
         const fetchMovies = async () => {
 
-
-
-
             await fetch(`https://www.omdbapi.com/?apikey=65f794e1&s=${category}`)
 
                 .then(response => response.json())
-                .then(response => {
 
+                .then(response => {
                     setResponse(response.Search)
-                    console.log(response.Search)
                     setloading(false)
                 })
-                .catch(err => {
 
+                .catch(err => {
                     setloading(false)
                     setError(true)
                     console.log(err)
                 });
+
         }
+        
         fetchMovies();
 
     }, [category])
