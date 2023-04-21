@@ -1,0 +1,143 @@
+.timer {
+    width: 61vw;
+    height: 28vh;
+    box-sizing: border-box;
+    background-color: #1E2343;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.counter,
+.counter-btn {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.counter .counting {
+    color: #fff;
+    background: url('images/circle.png'), #191E39;
+    background-size: 10vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 100px;
+    height: 12vw;
+    width: 12vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -3px -7px 16px #5f58583b, inset 0px 6px 26px rgba(0, 0, 0, 0.61);
+}
+
+.counter-btn {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+.set-counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60%;
+    width: 100%;
+}
+
+.set-counter .colon {
+    color: #fff;
+    font-size: 2rem;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.hours,
+.minutes,
+.seconds {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.hours img,
+.minutes img,
+.seconds img {
+    width: 1rem;
+    cursor: pointer;
+    transition: all .25s;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.hours input,
+.minutes input,
+.seconds input {
+    font-size: 2rem;
+    font-weight: 300;
+    background: transparent;
+    border: none;
+    color: #fff;
+    scroll-behavior: none;
+    width: 4vw;
+    display: flex;
+    text-align: center;
+}
+
+.hours input:focus,
+.minutes input:focus,
+.seconds input:focus {
+    outline: none;
+}
+
+.hours span,
+.minutes span,
+.seconds span {
+    color: #949494;
+    font-weight: 400;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.btn-count {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-count button {
+    font-weight: 400;
+    font-size: 1.25rem;
+    width: 100%;
+    background-color: #FF6A6A;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    padding: .75vh 0;
+    cursor: pointer;
+    transition: all .25s;
+}
+
+.hours img:hover,
+.minutes img:hover,
+.seconds img:hover{
+    transform: scale(1.25);
+}
+
+.btn-count button:hover {
+    transform: scale(1.05);
+}
+.hours img:active,
+.minutes img:active,
+.seconds img:active,
+.btn-count button:active {
+    transform: scale(1);
+}

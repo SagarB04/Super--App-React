@@ -4,7 +4,7 @@
     width: 50vw;
     height: 100vh;
     box-sizing: border-box;
-    background-image: url("./image.png");
+    background-image: url("./images/image.png");
     background-size: 50vw 100vh;
     color: #ffffff;
     display: flex;

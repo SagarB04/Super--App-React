@@ -1,0 +1,83 @@
+.pro-container{
+    background-color: #000000;
+    height: 100vh;
+    width: 100vw;
+}
+
+.home {
+    
+    box-sizing: border-box;
+    padding: 5vh 3vw 0;
+    height: 92vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.proflie-timer {
+    width: 61vw;
+    height: 87vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.proflie-timer .profile-note {
+    width: 61vw;
+    height: 55vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-note .profile-weather {
+    width: 29vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-note .notes{
+    width: 29vw;
+    height: 55vh;
+}
+
+.proflie-timer .lower {
+    width: 61vw;
+    height: 28vh;
+}
+
+
+.news {
+    height: 87vh;
+}
+
+.browsebtn{
+    box-sizing: border-box;
+    width: 100vw;
+    height: 8vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 3vw;
+}
+
+.browsebtn button {
+    box-sizing: border-box;
+    padding: 1vh 3vw;
+    border-radius: 100px;
+    border: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    background-color: #148A08;
+    color: #ffffff;
+    transition: all .2s;
+}
+.browsebtn button:hover{
+    transform: scale(1.05);
+}
+.browsebtn button:active{
+    transform: scale(1);
+}

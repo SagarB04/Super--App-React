@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Roboto:wght@400;500&family=Single+Day&display=swap');
+
+.note {
+    width: 29vw;
+    height: 55vh;
+    box-sizing: border-box;
+    background-color: #F1C75B;
+    border-radius: 30px;
+    padding: 3vh 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+}
+
+.note h1 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.note textarea {
+    width: 22.5vw;
+    height: 30vh;
+    background: transparent;
+    font-size: 1.5rem;
+    line-height: 2;
+    padding: 1vh 0;
+    resize: none;
+    border: none;
+}
+
+.note textarea:disabled {
+    color: #000;
+}
+
+.note textarea:focus {
+    outline: none;
+}
+
+.note div {
+    width: 23vw;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.note img {
+    width: 5vw;
+    transition: .35s;
+    cursor: pointer;
+}
+
+.note img:hover {
+    transform: scale(1.07);
+}
+
+.note img:active {
+    transform: scale(1);
+}

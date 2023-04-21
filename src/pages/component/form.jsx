@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './form.css'
+import { Link } from 'react-router-dom';
 
 export default function Form() {
 
@@ -32,7 +33,57 @@ export default function Form() {
         }
     }
 
-    const handleClick = () => {
+    const [inputlink, setInputlink] = useState("");
+
+    useEffect(() => {
+        if (check &&
+            formValues.name &&
+            formValues.username &&
+            isValidEmail(formValues.email) &&
+            formValues.mobile.length === 10) {
+            setInputlink('/select-category')
+        } else {
+            setInputlink("")
+        }
+    }, [check, formValues])
+
+
+    const handleClick = (e) => {
+
+       
+        let error = {};
+
+        if (!formValues.name) {
+            error.name = "* Name is required"
+            e.preventDefault();
+        }
+
+        if (!formValues.username) {
+            error.username = "* username is required"
+            e.preventDefault();
+        }
+
+        if (!formValues.email) {
+            error.email = "* Email is required"
+            e.preventDefault();
+        } else if (!isValidEmail(formValues.email)) {
+            error.email = "* Email must be in format (example@gmail.com)"
+            e.preventDefault();
+        }
+
+        if (!formValues.mobile) {
+            error.mobile = "* Mobile No. is required"
+            e.preventDefault();
+        } else if (formValues.mobile.length !== 10) {
+            error.mobile = "* There must be 10 numbers"
+            e.preventDefault();
+        }
+
+        if (!check) {
+            error.check = "* You must accept this!"
+            e.preventDefault();
+        }
+        setFormError(error);
 
         if (check &&
             formValues.name &&
@@ -44,38 +95,8 @@ export default function Form() {
             localStorage.setItem("username", formValues.username)
             localStorage.setItem("email", formValues.email)
             localStorage.setItem("mobile", formValues.mobile)
-            setFormValues({
-                name: "",
-                username: "",
-                email: "",
-                mobile: ""
-            })
-        }
 
-        let error = {};
-
-        if (!formValues.name) {
-            error.name = "* Name is required"
         }
-        if (!formValues.username) {
-            error.username = "* username is required"
-        }
-        if (!formValues.email) {
-            error.email = "* Email is required"
-        } else if (!isValidEmail(formValues.email)) {
-            error.email = "* Email must be in format (example@gmail.com)"
-        }
-
-        if (!formValues.mobile) {
-            error.mobile = "* Mobile No. is required"
-        } else if (formValues.mobile.length !== 10) {
-            error.mobile = "* There must be 10 numbers"
-        }
-        if (!check) {
-            error.check = "* You must accept this!"
-        }
-
-        setFormError(error);
     }
 
     return (
@@ -93,6 +114,7 @@ export default function Form() {
                 placeholder='Name'
                 onChange={handleChange}
                 value={formValues.name}
+                spellCheck="false"
             />
             <div className='error'>
                 <p>{formError.name}</p>
@@ -105,6 +127,7 @@ export default function Form() {
                 placeholder='UserName'
                 onChange={handleChange}
                 value={formValues.username}
+                spellCheck="false"
             />
             <div className='error'>
                 <p>{formError.username}</p>
@@ -117,6 +140,7 @@ export default function Form() {
                 placeholder='Email'
                 onChange={handleChange}
                 value={formValues.email}
+                spellCheck="false"
             />
             <div className='error'>
                 <p>{formError.email}</p>
@@ -142,7 +166,8 @@ export default function Form() {
                 <p>{formError.check}</p>
             </div>
 
-            <button onClick={handleClick} >SIGN UP</button>
+            <Link className='link' to={inputlink} onClick={handleClick}  ><button>SIGN UP</button></Link>
+
 
             <div className='termsCondition'>By clicking on Sign up. you agree to Superapp <span>Terms and Conditions of Use</span></div>
 

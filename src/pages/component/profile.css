@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Roboto:wght@400;500&family=Single+Day&display=swap');
+
+.profile {
+    background-color: #5746EA;
+    box-sizing: border-box;
+    width: 29vw;
+    height: 34vh;
+    border-radius: 30px;
+    padding: 2vh 1.2vw;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.profile .image img {
+    width: 8vw;
+    height: 31vh;
+}
+
+.profile .info {
+    width: 17vw;
+    color: #FFFFFF;
+}
+
+.profile .info p {
+    font-size: 1rem;
+    margin: 1.6vh 0;
+}
+
+.profile .info h1 {
+    font-size: 2rem;
+    margin: 0 0;
+    font-weight: 500;
+}
+
+.profile .info .category-container {
+    margin: 2vh 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile .info .category {
+    display: flex;
+    justify-content: space-between;
+    background-color: #9F94FF;
+    border-radius: 30px;
+    margin-right: .5vw;
+    margin-bottom: .5vw;
+    width: 5vw;
+    box-sizing: border-box;
+    padding: .8vh .5vw;
+    font-size: .85rem;
+}
+
+.profile .info .category span:hover {
+    cursor: pointer;
+    color: rgb(136, 11, 11);
+}
