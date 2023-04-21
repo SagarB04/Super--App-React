@@ -9,7 +9,7 @@ function App() {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/Super-App-React" element={<Register />} />
+        <Route path="/" element={<Register />} />
         <Route path="/select-category" element={<SelectCategory />} />
         <Route path="/homepage" element={<Homepage />} />
         <Route path="/browse" element={<Browse />} />
